@@ -52,3 +52,4 @@ Things you may want to cover:
 ### Association
 - belongs_to :tweet
 - belongs_to :user
+
