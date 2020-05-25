@@ -1,0 +1,41 @@
+.main-chat
+  .main-chat__header
+    .left-box
+      .group-name
+        %p test
+      .member-list
+        %p Member : masa
+    = link_to '#' do
+      .edit-btn
+        Edit
+  .main-chat__messages
+    .main-chat__messages__deta-message
+    
+      .main-chat__messages__deta-message__upper-info 
+        .talker
+          %p masa
+        .date 
+          %p 2019/11/20(wad) 17:43:01
+      
+      .main-chat__messages__deta-message__text
+        %p おはよう
+
+
+      .main-chat__messages__deta-message__upper-info 
+        .talker
+          %p masa
+        .date 
+          %p 2019/11/20(wad) 17:43:01
+      
+      .main-chat__messages__deta-message__text
+        %p おはよう
+
+  .main-chat__form
+    .main-chat__form__new_messeage
+      .main-chat__form__new_messeage__input-box
+        %input.main-chat__form__new_messeage__input-box--message{placeholder:"type a messeage"} 
+        .main-chat__form__new_messeage__input-box--image
+          %label.image
+            = icon('fas', 'image' ,class: 'icon')
+            %input{type: "file" ,class:'images'}
+      %button.main-chat__form__new_messeage__edit-btn send
