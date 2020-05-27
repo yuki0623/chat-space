@@ -50,9 +50,15 @@
         color: #ffffff;
         margin-bottom: 40px;
 
+        .group-list_link {
+          text-decoration: none;
+        }
+
         .name {
-         font-size: 15px;
-        margin-bottom: 5px;
+          font-size: 15px;
+          margin-bottom: 5px;
+          color: #ffffff;
+          text-decoration: none;
         }
 
         .latest-message {
