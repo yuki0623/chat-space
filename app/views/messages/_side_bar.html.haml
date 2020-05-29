@@ -13,17 +13,9 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .side-bar__group-list__summary
-        = link_to '#', class: 'group-list_link' do
+        = link_to group_messages_path (group) do
           .name
             = group.name
         .latest-message
-          %p まだメッセージがありません
-      .side-bar__group-list__summary
-
-
-
-        .name
-          %p techcamp
-        .latest-message
-          %p まだメッセージがありません
-
+          = group.show_last_message
+     
