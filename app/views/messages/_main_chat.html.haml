@@ -2,13 +2,19 @@
   .main-chat__header
     .left-box
       .group-name
-        %p test
+        = @group.name
       .member-list
-        %p Member : masa
-    = link_to '#' do
+        %p Menber:
+        - @group.users.each do |user|
+          = user.name 
+  
+    = link_to edit_group_path(@group) do
+
       .edit-btn
         Edit
+
   .main-chat__messages
+    = render @messages
     .main-chat__messages__deta-message
     
       .main-chat__messages__deta-message__upper-info 
@@ -31,11 +37,13 @@
         %p おはよう
 
   .main-chat__form
-    .main-chat__form__new_messeage
-      .main-chat__form__new_messeage__input-box
-        %input.main-chat__form__new_messeage__input-box--message{placeholder:"type a messeage"} 
-        .main-chat__form__new_messeage__input-box--image
-          %label.image
-            = icon('fas', 'image' ,class: 'icon')
-            %input{type: "file" ,class:'images'}
-      %button.main-chat__form__new_messeage__edit-btn send
+    = form_for [@group, @message]do |f|
+      .main-chat__form__new_messeage
+        .main-chat__form__new_messeage__input-box
+          = f.text_field :content, class: 'main-chat__form__new_messeage__input-box--message', placeholder: 'type a message' 
+          .main-chat__form__new_messeage__input-box--image
+            = f.label :image, class: 'image' do
+              = icon('fas', 'image' ,class: 'icon')
+              = f.file_field :image, class: 'images'
+        = f.submit 'send', class: 'main-chat__form__new_messeage__edit-btn'
+
