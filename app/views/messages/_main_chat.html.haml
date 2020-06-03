@@ -15,35 +15,17 @@
 
   .main-chat__messages
     = render @messages
-    .main-chat__messages__deta-message
-    
-      .main-chat__messages__deta-message__upper-info 
-        .talker
-          %p masa
-        .date 
-          %p 2019/11/20(wad) 17:43:01
-      
-      .main-chat__messages__deta-message__text
-        %p おはよう
 
-
-      .main-chat__messages__deta-message__upper-info 
-        .talker
-          %p masa
-        .date 
-          %p 2019/11/20(wad) 17:43:01
-      
-      .main-chat__messages__deta-message__text
-        %p おはよう
 
   .main-chat__form
     = form_for [@group, @message]do |f|
-      .main-chat__form__new_messeage
-        .main-chat__form__new_messeage__input-box
-          = f.text_field :content, class: 'main-chat__form__new_messeage__input-box--message', placeholder: 'type a message' 
-          .main-chat__form__new_messeage__input-box--image
+      .main-chat__form__new_message
+        .main-chat__form__new_message__input-box
+          = f.text_field :content, class: 'main-chat__form__new_message__input-box--message', placeholder: 'type a message' 
+          .main-chat__form__new_message__input-box--image
             = f.label :image, class: 'image' do
               = icon('fas', 'image' ,class: 'icon')
               = f.file_field :image, class: 'images'
-        = f.submit 'send', class: 'main-chat__form__new_messeage__edit-btn'
-
+        = f.submit 'send', class: 'main-chat__form__new_message__edit-btn'
+      
+      
