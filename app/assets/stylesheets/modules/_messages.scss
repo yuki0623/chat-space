@@ -120,36 +120,37 @@
       }
     }
 
-    &__messages {
+    .main-chat__messages {
       height: calc(100vh - 190px);
       padding: 35px 40px 35px 40px; 
       overflow: scroll;
 
-      &__deta-message {
+      .main-chat__messages__date-massage__upper-info {
         padding-bottom: 35px;
-        
-
-        &__upper-info {
+      
+        .main-chat__messages__date-massage__upper-info__berths {
           margin-bottom: 12px;
-          display: flex;
 
-          .talker {
-            font-size: 16px;
-            color: #333333;
-            font-weight: bold;
-          }
+          .upper-message {
+            display: flex;
 
-          .date {
-            font-size: 12px;
-            color: #999999;
-            margin-left: 10px;
+            .talker {
+              font-size: 16px;
+              color: #333333;
+              font-weight: bold;
+            }
+  
+            .date {
+              font-size: 12px;
+              color: #999999;
+              margin-left: 10px;
+            }
           }
-        }
-        
-        &__text {
-          font-size: 14px;
-          color: #434A54;
-          margin-bottom: 46px;
+          .main-chat__messages__deta-massage__text {
+            font-size: 14px;
+            color: #434A54;
+            margin-bottom: 46px;
+          }
         }
       }
     }
