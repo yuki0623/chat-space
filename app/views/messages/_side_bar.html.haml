@@ -3,7 +3,6 @@
     .side-bar__header__items
       .user
         = current_user.name
-        masa
       .icons
         = link_to new_group_path do
           = icon('far','edit')
@@ -18,4 +17,3 @@
             = group.name
         .latest-message
           = group.show_last_message
-     
